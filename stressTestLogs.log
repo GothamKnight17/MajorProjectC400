@@ -1,0 +1,163 @@
+2024-10-31 15:25:16,588 - INFO - User selected option: 6
+2024-10-31 15:25:16,591 - INFO - Exporters stopped.
+2024-10-31 15:25:22,392 - INFO - User selected option: 7
+2024-10-31 15:25:22,392 - WARNING - Invalid choice entered by user.
+2024-10-31 15:25:26,335 - INFO - User selected option: 6
+2024-10-31 15:25:26,337 - INFO - Exporters stopped.
+2024-10-31 15:25:45,410 - INFO - User selected option: 1
+2024-10-31 15:25:45,410 - INFO - Starting memory stress test.
+2024-10-31 15:26:15,471 - INFO - Memory usage after test: 77.6%
+2024-10-31 15:29:19,259 - INFO - User selected option: 2
+2024-10-31 15:29:19,259 - INFO - Starting disk stress test.
+2024-10-31 15:29:49,644 - INFO - Disk usage after test: 20.1%
+2024-10-31 15:35:03,848 - INFO - User selected option: 1
+2024-10-31 15:35:03,849 - INFO - Starting memory stress test.
+2024-10-31 15:35:33,939 - INFO - Memory usage after test: 61.6%
+2024-10-31 15:35:56,242 - INFO - User selected option: 2
+2024-10-31 15:35:56,243 - INFO - Starting disk stress test.
+2024-10-31 15:36:26,686 - INFO - Disk usage after test: 20.1%
+2024-10-31 15:36:54,123 - INFO - User selected option: 3
+2024-10-31 15:36:54,123 - INFO - Starting network stress test.
+2024-10-31 15:38:25,383 - INFO - Network data transferred (in bytes): 197769393823
+2024-10-31 15:39:59,097 - INFO - User selected option: 4
+2024-10-31 15:39:59,097 - INFO - Starting CPU stress test.
+2024-10-31 15:40:30,167 - INFO - CPU usage after test: 0.5%
+2024-10-31 15:42:13,528 - INFO - User selected option: 5
+2024-10-31 15:42:13,528 - INFO - Starting MySQL stress test.
+2024-10-31 15:43:14,760 - INFO - MySQL QPS during test: 1
+2024-10-31 15:44:11,296 - INFO - User selected option: 1
+2024-10-31 15:44:11,297 - INFO - Starting memory stress test.
+2024-10-31 15:44:41,345 - INFO - Memory usage after test: 40.9%
+2024-10-31 15:45:14,594 - INFO - User selected option: 6
+2024-10-31 15:45:14,597 - INFO - Exporters stopped.
+2024-10-31 15:46:16,023 - INFO - User selected option: 1
+2024-10-31 15:46:16,024 - INFO - Starting memory stress test.
+2024-10-31 15:46:48,560 - INFO - Memory usage after test: 42.1%
+2024-10-31 15:47:16,571 - INFO - User selected option: 2
+2024-10-31 15:47:16,571 - INFO - Starting disk stress test.
+2024-10-31 15:47:47,073 - INFO - Disk usage after test: 20.1%
+2024-10-31 15:48:22,045 - INFO - User selected option: 6
+2024-10-31 15:48:22,056 - INFO - Exporters stopped.
+2024-10-31 15:51:08,437 - INFO - User selected option: 1
+2024-10-31 15:51:08,438 - INFO - Starting memory stress test.
+2024-10-31 15:52:08,934 - INFO - Memory usage after test: 35.4%
+2024-10-31 15:52:39,600 - INFO - User selected option: 2
+2024-10-31 15:52:39,600 - INFO - Starting disk stress test.
+2024-10-31 15:53:39,930 - INFO - Disk usage after test: 20.1%
+2024-10-31 15:54:20,506 - INFO - User selected option: 6
+2024-10-31 15:54:20,516 - INFO - Exporters stopped.
+2024-10-31 15:54:49,660 - INFO - User selected option: 1
+2024-10-31 15:54:49,661 - INFO - Starting memory stress test.
+2024-10-31 15:55:49,984 - INFO - Memory usage after test: 24.0%
+2024-10-31 15:55:55,598 - INFO - User selected option: 6[A
+2024-10-31 15:55:55,608 - WARNING - Invalid choice entered by user.
+2024-10-31 15:55:58,338 - INFO - User selected option: 6
+2024-10-31 15:55:58,353 - INFO - Exporters stopped.
+2024-10-31 15:56:18,247 - INFO - User selected option: 1
+2024-10-31 15:56:18,247 - INFO - Starting memory stress test.
+2024-10-31 15:57:18,625 - INFO - Memory usage after test: 19.2%
+2024-10-31 15:57:55,049 - INFO - User selected option: 6
+2024-10-31 15:57:55,063 - INFO - Exporters stopped.
+2024-10-31 15:58:54,683 - INFO - User selected option: 1
+2024-10-31 15:58:54,684 - INFO - Starting memory stress test.
+2024-10-31 15:59:55,143 - INFO - Memory usage after test: 17.8%
+2024-10-31 16:01:10,428 - INFO - User selected option: 2
+2024-10-31 16:01:10,429 - INFO - Starting disk stress test.
+2024-10-31 16:02:10,945 - INFO - Disk usage after test: 20.1%
+2024-10-31 16:02:32,081 - INFO - User selected option: 2
+2024-10-31 16:02:32,081 - INFO - Starting disk stress test.
+2024-10-31 16:02:50,411 - INFO - Disk usage after test: 20.1%
+2024-10-31 16:02:54,052 - INFO - User selected option: 6
+2024-10-31 16:02:54,073 - INFO - Exporters stopped.
+2024-10-31 16:04:46,756 - INFO - User selected option: 8
+2024-10-31 16:04:46,757 - WARNING - Invalid choice entered by user.
+2024-10-31 16:04:57,647 - INFO - User selected option: 2
+2024-10-31 16:04:57,648 - INFO - Starting disk stress test.
+2024-10-31 16:05:58,064 - INFO - Disk usage after test: 20.1%
+2024-10-31 16:09:54,419 - INFO - User selected option: 6
+2024-10-31 16:09:54,423 - INFO - Exporters stopped.
+2024-10-31 16:22:10,987 - INFO - Exporters stopped.
+2024-10-31 16:22:18,896 - INFO - User selected option: 6
+2024-10-31 16:22:18,898 - INFO - Exporters stopped.
+2024-10-31 16:34:04,757 - INFO - User selected option: 6
+2024-10-31 16:34:04,759 - INFO - Exporters stopped.
+2024-10-31 17:51:50,435 - INFO - User selected option: 6
+2024-10-31 17:51:50,437 - INFO - Exporters stopped.
+2024-10-31 17:52:04,480 - INFO - User selected option: 6
+2024-10-31 17:52:04,483 - INFO - Exporters stopped.
+2024-10-31 17:56:34,820 - INFO - User selected option: 6
+2024-10-31 17:56:34,823 - INFO - Exporters stopped.
+2024-10-31 17:57:11,317 - INFO - User selected option: 1
+2024-10-31 17:57:11,318 - INFO - Starting memory stress test.
+2024-10-31 17:57:41,383 - INFO - Memory usage after test: 45.2%
+2024-10-31 17:57:52,222 - INFO - User selected option: 2
+2024-10-31 17:57:52,222 - INFO - Starting disk stress test.
+2024-10-31 17:58:22,538 - INFO - Disk usage after test: 20.8%
+2024-10-31 17:58:34,289 - INFO - User selected option: 3
+2024-10-31 17:58:34,289 - INFO - Starting network stress test.
+2024-10-31 17:59:05,509 - INFO - Network data transferred (in bytes): 366921535847
+2024-10-31 17:59:11,453 - INFO - User selected option: 4
+2024-10-31 17:59:11,453 - INFO - Starting CPU stress test.
+2024-10-31 17:59:42,507 - INFO - CPU usage after test: 0.0%
+2024-10-31 17:59:59,996 - INFO - User selected option: 5
+2024-10-31 17:59:59,996 - INFO - Starting MySQL stress test.
+2024-10-31 18:00:09,258 - ERROR - MySQL stress test failed: 2003 (HY000): Can't connect to MySQL server on '192.168.1.4:3306' (113)
+2024-10-31 18:00:35,165 - INFO - User selected option: 6
+2024-10-31 18:00:35,168 - INFO - Exporters stopped.
+2024-10-31 18:03:19,694 - INFO - User selected option: 5
+2024-10-31 18:03:19,695 - INFO - Starting MySQL stress test.
+2024-10-31 18:04:26,730 - ERROR - MySQL stress test failed: 2003 (HY000): Can't connect to MySQL server on '192.168.1.4:3306' (113)
+2024-10-31 18:04:32,356 - INFO - User selected option: 6
+2024-10-31 18:04:32,359 - INFO - Exporters stopped.
+2024-10-31 18:19:51,171 - INFO - User selected option: 6
+2024-10-31 18:19:51,174 - INFO - Exporters stopped.
+2024-10-31 18:23:13,434 - INFO - User selected option: 1
+2024-10-31 18:23:13,435 - INFO - Starting memory stress test.
+2024-10-31 18:23:44,069 - INFO - Memory usage after test: 42.1%
+2024-10-31 18:25:05,405 - INFO - User selected option: 1
+2024-10-31 18:25:05,405 - INFO - Starting memory stress test.
+2024-10-31 18:25:35,836 - INFO - Memory usage after test: 39.4%
+2024-10-31 18:28:20,531 - INFO - User selected option: 5
+2024-10-31 18:28:20,531 - INFO - Starting MySQL stress test.
+2024-10-31 18:29:23,818 - ERROR - MySQL stress test failed: 2003 (HY000): Can't connect to MySQL server on '192.168.1.4:3306' (113)
+2024-10-31 18:30:28,304 - INFO - User selected option: 6
+2024-10-31 18:30:28,309 - INFO - Exporters stopped.
+2024-10-31 18:34:55,018 - INFO - User selected option: 6
+2024-10-31 18:34:55,024 - INFO - Exporters stopped.
+2024-10-31 18:36:47,711 - INFO - User selected option: 5
+2024-10-31 18:36:47,713 - INFO - Starting MySQL stress test.
+2024-10-31 18:37:03,018 - ERROR - MySQL stress test failed: 2003 (HY000): Can't connect to MySQL server on '192.168.1.4:3306' (113)
+2024-10-31 18:37:05,642 - INFO - User selected option: 6
+2024-10-31 18:37:05,643 - INFO - Exporters stopped.
+2024-10-31 18:38:06,409 - INFO - User selected option: 5
+2024-10-31 18:38:06,409 - INFO - Starting MySQL stress test.
+2024-10-31 18:39:11,915 - ERROR - MySQL stress test failed: 2003 (HY000): Can't connect to MySQL server on '192.168.1.4:3306' (113)
+2024-10-31 18:40:38,994 - INFO - User selected option: 6
+2024-10-31 18:40:38,999 - INFO - Exporters stopped.
+2024-10-31 19:32:17,926 - INFO - User selected option: 3
+2024-10-31 19:32:17,927 - INFO - Starting network stress test.
+2024-10-31 19:32:49,201 - INFO - Network data transferred (in bytes): 528426314594
+2024-10-31 19:33:10,595 - INFO - User selected option: 1
+2024-10-31 19:33:10,595 - INFO - Starting memory stress test.
+2024-10-31 19:33:41,198 - INFO - Memory usage after test: 32.0%
+2024-10-31 19:33:58,625 - INFO - User selected option: 4
+2024-10-31 19:33:58,634 - INFO - Starting CPU stress test.
+2024-10-31 19:34:29,750 - INFO - CPU usage after test: 0.5%
+2024-10-31 19:37:21,617 - INFO - User selected option: 6
+2024-10-31 19:37:21,637 - INFO - Exporters stopped.
+2024-10-31 20:00:18,476 - INFO - User selected option: 1
+2024-10-31 20:00:18,477 - INFO - Starting memory stress test.
+2024-10-31 20:00:49,211 - INFO - Memory usage after test: 37.1%
+2024-10-31 20:02:43,846 - INFO - User selected option: 6
+2024-10-31 20:02:43,858 - INFO - Exporters stopped.
+2024-10-31 20:58:06,979 - INFO - User selected option: 6
+2024-10-31 20:58:06,983 - INFO - Exporters stopped.
+2024-11-01 08:18:56,526 - INFO - User selected option: 6
+2024-11-01 08:18:56,538 - INFO - Exporters stopped.
+2024-11-01 08:46:55,623 - INFO - User selected option: 6
+2024-11-01 08:46:55,628 - INFO - Exporters stopped.
+2024-11-01 08:55:26,259 - INFO - User selected option: 6
+2024-11-01 08:55:26,262 - INFO - Exporters stopped.
+2024-11-01 12:22:58,381 - INFO - Exporters stopped.
+2024-11-01 12:23:08,021 - INFO - User selected option: 6
+2024-11-01 12:23:08,031 - INFO - Exporters stopped.

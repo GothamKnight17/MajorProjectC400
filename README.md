@@ -1,6 +1,7 @@
 # MajorProjectC400
 Setting Up Your Environment
 
+In A Different VM(Remote VM) with MySQL Server
 1. MySQL Database Configuration:
 Create a MySQL User:
 SQL
@@ -23,7 +24,7 @@ Generate API Keys:
 Gemini API Key: Obtain a new API key from the Gemini API platform.
 Twilio Account SID and Auth Token: Create a Twilio account and retrieve your Account SID and Auth Token.
 
-
+In VM in which you are intending to run the python file
 3. Environment Variable Configuration:
 Create a .env File: Create a .env file in the same directory as your Python script.
 Add Sensitive Information: Add the following lines to the .env file, replacing the placeholders with your actual credentials:
