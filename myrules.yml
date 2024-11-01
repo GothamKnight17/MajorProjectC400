@@ -1,0 +1,51 @@
+groups:
+  - name: resource_alerts
+    rules:
+      - alert: HighMemoryUsage
+        expr: node_memory_Active_bytes / node_memory_MemTotal_bytes * 100 > 5
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High Memory Usage on {{ $labels.instance }}"
+          description: "Memory usage is above 5% on instance {{ $labels.instance }}"
+
+     
+      - alert: HighCPUUsage
+        expr: (1 - avg by(instance) (rate(node_cpu_seconds_total{mode="idle"}[5m]))) * 100 > 80
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High CPU Usage on {{ $labels.instance }}"
+          description: "CPU usage is above 80% on instance {{ $labels.instance }}"
+
+     
+      - alert: HighDiskUsage
+        expr: node_filesystem_avail_bytes{mountpoint="/"} / node_filesystem_size_bytes{mountpoint="/"} * 100 > 40
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High Disk Usage on {{ $labels.instance }}"
+          description: "Disk usage is above 60% on instance {{ $labels.instance }}"
+
+    
+      - alert: HighMySQLQPS
+        expr: rate(mysql_global_status_questions[1m]) > 100
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High MySQL QPS on {{ $labels.instance }}"
+          description: "Queries per second is above 100 on instance {{ $labels.instance }}"
+      
+      
+      - alert: HighNetworkUsage
+        expr: (rate(node_network_transmit_bytes_total[5m]) + rate(node_network_receive_bytes_total[5m])) > 10485760
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High Network Usage on {{ $labels.instance }}"
+          description: "Network usage has exceeded the defined threshold on instance {{ $labels.instance }}. Transmit and receive rate is higher than expected."
