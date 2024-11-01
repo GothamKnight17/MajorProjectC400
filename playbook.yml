@@ -1,0 +1,144 @@
+---
+- name: Set up monitoring and CI/CD environment
+  hosts: all
+  become: yes
+  vars:
+    prometheus_version: "2.34.0"
+    node_exporter_version: "1.2.2"
+    grafana_version: "9.4.7"
+    alertmanager_version: "0.23.0"
+
+  tasks:
+
+    - name: Ensure EPEL repository is enabled
+      ansible.builtin.yum:
+        name: epel-release
+        state: present
+      when: ansible_distribution == "CentOS"
+
+- name: Install Prometheus, Alertmanager, and Grafana on vm0_group
+  hosts: vm0_group
+  tasks:
+
+    - name: Install Prometheus
+      ansible.builtin.get_url:
+        url: "https://github.com/prometheus/prometheus/releases/download/v2.53.2/prometheus-2.53.2.linux-amd64.tar.gz"
+        dest: /tmp/prometheus.tar.gz
+
+    - name: Extract Prometheus
+      ansible.builtin.unarchive:
+        src: /tmp/prometheus.tar.gz
+        dest: /root
+        remote_src: yes
+
+    - name: Install Grafana
+      ansible.builtin.get_url:
+        url: "https://dl.grafana.com/enterprise/release/grafana-enterprise-11.3.0-1.x86_64.rpm"
+        dest: /tmp/grafana.rpm
+
+    - name: Install Grafana Package
+      ansible.builtin.yum:
+        name: /tmp/grafana.rpm
+        state: present
+        disable_gpg_check: yes
+
+    - name: Reload systemd daemon
+      ansible.builtin.systemd:
+        daemon_reload: yes
+
+    - name: Install Alertmanager
+      ansible.builtin.get_url:
+        url: "https://github.com/prometheus/alertmanager/releases/download/v0.27.0/alertmanager-0.27.0.linux-amd64.tar.gz"
+        dest: /tmp/alertmanager.tar.gz
+
+    - name: Extract Alertmanager
+      ansible.builtin.unarchive:
+        src: /tmp/alertmanager.tar.gz
+        dest: /root
+        remote_src: yes
+
+
+- name: Install Python, Node Exporter, MySQL Exporter, Jenkins, and Docker on vm1_group
+  hosts: vm1_group
+  tasks:
+
+    - name: Install Python 3
+      ansible.builtin.yum:
+        name: python3
+        state: present
+
+    - name: Install Node Exporter
+      ansible.builtin.get_url:
+        url: "https://github.com/prometheus/node_exporter/releases/download/v1.8.2/node_exporter-1.8.2.linux-amd64.tar.gz"
+        dest: /tmp/node_exporter.tar.gz
+
+    - name: Extract Node Exporter
+      ansible.builtin.unarchive:
+        src: /tmp/node_exporter.tar.gz
+        dest: /root
+        remote_src: yes
+
+    - name: Download MySQL Exporter
+      ansible.builtin.get_url:
+        url: "https://github.com/prometheus/mysqld_exporter/releases/download/v0.15.1/mysqld_exporter-0.15.1.linux-amd64.tar.gz"
+        dest: /tmp/mysql_exporter.tar.gz
+
+    - name: Extract MySQL Exporter
+      ansible.builtin.unarchive:
+        src: /tmp/mysql_exporter.tar.gz
+        dest: /root
+        remote_src: yes
+
+    - name: Download Jenkins repository file
+      ansible.builtin.get_url:
+        url: "https://pkg.jenkins.io/redhat-stable/jenkins.repo"
+        dest: /etc/yum.repos.d/jenkins.repo
+
+    - name: Import Jenkins GPG key
+      ansible.builtin.rpm_key:
+        state: present
+        key: https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
+
+    - name: Install dependencies for Jenkins
+      ansible.builtin.yum:
+        name:
+          - fontconfig
+          - java-17-openjdk
+        state: present
+
+    - name: Install Jenkins
+      ansible.builtin.yum:
+        name: jenkins
+        state: present
+
+    - name: Reload systemd daemon
+      ansible.builtin.systemd:
+        daemon_reload: yes
+
+    - name: Install Docker
+      ansible.builtin.yum:
+        name: docker
+        state: present
+
+
+    - name: Start and enable Jenkins service
+      ansible.builtin.systemd:
+        name: jenkins
+        state: started
+        enabled: yes
+
+- name: Install MySQL on vm2_group
+  hosts: vm2_group
+  tasks:
+
+    - name: Install MySQL
+      ansible.builtin.yum:
+        name: mysql-server
+        state: present
+
+    - name: Start and enable MySQL service
+      ansible.builtin.systemd:
+        name: mysqld
+        state: started
+        enabled: yes
