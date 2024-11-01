@@ -1,0 +1,14 @@
+global:
+  smtp_smarthost: 'smtp.gmail.com:587'
+  smtp_from: '<yourgmail>'
+  smtp_auth_username: '<yourgmailUsedForGenerationOfGmailAppPasswordGeneration>'
+  smtp_auth_password: '<GmailAppPassword>'
+
+route:
+  receiver: 'email-notifications'
+
+receivers:
+  - name: 'email-notifications'
+    email_configs:
+      - to: '<recieversemail>'
+        send_resolved: true
