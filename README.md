@@ -29,7 +29,6 @@ Then in the terminal, run:
 
 \> ansible-playbook \-i hosts.ini playbook.yml
 
-![][image1]
 
 After the successful execution of the above codes, your VMs will have the following software:
 
@@ -105,7 +104,7 @@ After the successful execution of the above codes, your VMs will have the follow
 - Run Command:   
   \> pip install \-r requirements.txt  
     
-- Create a Python code file and name it stress.py. You can copy the content from either of these links:  
+- Create a Python code file and name it stress.py. You can copy the content from link:  
 1. [https://github.com/GothamKnight17/MajorProjectC400/blob/main/stressTest.py](https://github.com/GothamKnight17/MajorProjectC400/blob/main/stressTest.py)
 
    Using this code you don't have to manually create the table for stress testing.
