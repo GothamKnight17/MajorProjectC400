@@ -6,16 +6,14 @@ import psutil
 import mysql.connector
 from dotenv import load_dotenv
 
-# Configure logging
 logging.basicConfig(
     filename='stressTestLogs.log',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
-# Load environment variables
 load_dotenv()
-sqlpass = os.environ.get('sqlpass')
+sqlpass = os.environ.get('Sqlpass')
 
 # Stress test functions with improved logging
 def memory_stress_test():
@@ -60,12 +58,12 @@ def network_stress_test():
 def mysql_stress_test():
     logging.info("Starting MySQL stress test.")
     try:
-        os.system(f"sysbench --db-driver=mysql --mysql-host=192.168.1.6 --mysql-user=remote --mysql-password={sqlpass} --mysql-db=stressTest --table-size=1000 --tables=1 oltp_read_only prepare")
-        os.system(f"sysbench --db-driver=mysql --mysql-host=192.168.1.6 --mysql-user=remote --mysql-password={sqlpass} --mysql-db=stressTest --table-size=1000 --tables=1 --threads=4 --time=60 oltp_read_only run")
+        os.system(f"sysbench --db-driver=mysql --mysql-host=192.168.1.22 --mysql-user=remote --mysql-password={Sqlpass} --mysql-db=stressTest --table-size=1000 --tables=1 oltp_read_only prepare")
+        os.system(f"sysbench --db-driver=mysql --mysql-host=192.168.1.22 --mysql-user=remote --mysql-password={Sqlpass} --mysql-db=stressTest --table-size=1000 --tables=1 --threads=4 --time=60 oltp_read_only run")
 
         # Calculate QPS
         connection = mysql.connector.connect(
-            host="192.168.1.4",
+            host="192.168.1.22",
             user="remote",
             password=sqlpass,
             database="stressTest"
@@ -79,7 +77,6 @@ def mysql_stress_test():
         qps = final_queries - initial_queries
         logging.info(f"MySQL QPS during test: {qps}")
 
-        # Close MySQL connection
         cursor.close()
         connection.close()
     except mysql.connector.Error as err:
@@ -87,9 +84,9 @@ def mysql_stress_test():
     except Exception as e:
         logging.error(f"MySQL stress test encountered an unexpected error: {e}")
     finally:
-        os.system(f"sysbench --db-driver=mysql --mysql-host=192.168.1.6 --mysql-user=remote --mysql-password={sqlpass} --mysql-db=stressTest oltp_read_only cleanup")
+        os.system(f"sysbench --db-driver=mysql --mysql-host=192.168.1.22 --mysql-user=remote --mysql-password={Sqlpass} --mysql-db=stressTest oltp_read_only cleanup")
 
-# Main function to run the stress tests
+
 def main():
     node_exp = subprocess.Popen(["/root/node_exporter-1.8.2.linux-amd64/node_exporter"])
     mysqld_exp = subprocess.Popen(["/root/mysqld_exporter-0.15.1.linux-amd64/mysqld_exporter", "--config.my-cnf=/root/.my.cnf"])
