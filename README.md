@@ -34,6 +34,8 @@ TWILIO_WHATSAPP_FROM=whatsapp:+14155238886
 USER_WHATSAPP_TO=whatsapp:CountryCodeYourWhatsAppNumber
 API_KEY=YourGeminiAPIKey/Token
 
+4. Don't forget to update your SQL database details in the stressTest.py file as well. 
+
 Important: Ensure that the .env file is not committed to your version control system to protect your sensitive information.
 Running the Application
 
