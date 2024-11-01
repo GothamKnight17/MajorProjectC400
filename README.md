@@ -4,7 +4,6 @@ Setting Up Your Environment
 In A Different VM(Remote VM) with MySQL Server
 1. MySQL Database Configuration:
 Create a MySQL User:
-SQL
 CREATE USER 'remote'@'%' IDENTIFIED BY 'YourStrongPassword';
 
 Replace YourStrongPassword with a strong, unique password.
