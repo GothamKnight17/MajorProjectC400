@@ -1,4 +1,4 @@
-**Project StressWatch : Documentation Cum Guide**
+**Project StressWatch - AI-Enhanced Self-Monitoring System : Documentation Cum Guide**
 
 ---
 
